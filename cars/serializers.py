@@ -4,7 +4,7 @@ from cars.models import Car
 class CarListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Car
-        fields = ('id', 'vin', 'user')
+        fields = '__all__'
 
 class CarDetailSerializer(serializers.ModelSerializer):
     user = serializers.HiddenField(default=serializers.CurrentUserDefault())
